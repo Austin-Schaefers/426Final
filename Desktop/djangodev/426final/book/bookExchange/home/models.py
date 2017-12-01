@@ -17,4 +17,7 @@ class Book(models.Model):
     title = models.CharField(max_length=25)
     edition = models.IntegerField()
 
+class Exchange(models.Model):
+    eid = models.IntegerField(max_length=12, unique=True)
+
 
