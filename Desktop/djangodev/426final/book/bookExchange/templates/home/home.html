@@ -5,7 +5,7 @@
 <head>
     {% bootstrap_css %}
     {% bootstrap_javascript %}
-    <link rel ="stylesheet" type="text/css" href='{% static "css/style.css" %}'/>
+    <link rel ="stylesheet" type="text/css" href='{% static "css/home.css" %}'/>
     <meta charset="UTF-8">
     <title>Book Exchange</title>
 </head>
@@ -38,8 +38,14 @@
     </nav>
 
     <!-- Page Content -->
-    <div id="home">
-
+    <div class="container">
+        <form method="get">
+            {{ homeForm.as_p }}
+            {% csrf_token %}
+            <span>
+                <input type="submit" class="btn btn-primary" value="Search">
+            </span>
+        </form>
     </div>
 </body>
 </html>
