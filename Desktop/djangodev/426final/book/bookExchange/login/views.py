@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from . import forms
 
 # Create your views here.
 def login(request):
-    render(request, 'login/login.html', {})
+    myDict = {"insert_me": "klwemlwemdwe"}
+    return render(request, 'login/login.html', myDict)

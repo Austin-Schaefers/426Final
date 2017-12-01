@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-# Create your views here.
+from . import forms
 
 def register(request):
-    myDict = {}
-    render(request, "register/register.html", {})
+    form = forms.rForm()
+    return render(request, 'register/register.html',{'form':form})
