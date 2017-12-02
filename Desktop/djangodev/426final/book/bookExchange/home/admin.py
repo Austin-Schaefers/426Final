@@ -1,5 +1,5 @@
 from django.contrib import admin
-import models
+from home import models
 
 # Register your models here.
 #remember to make superuser for everybody in the group pass: pass user: name
