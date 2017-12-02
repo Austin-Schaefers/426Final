@@ -3,5 +3,5 @@ from home import views
 
 urlpatterns = [
     url(r'^$', views.home,name='home'),
-    url(r'^$', views.ISBNfinder,name='homeForm')
+    url(r'^autocomplete/get_book', views.AutoCompleteView.as_view(), name='autocomplete')
 ]
