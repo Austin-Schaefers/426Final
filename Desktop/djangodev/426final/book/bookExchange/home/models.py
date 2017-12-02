@@ -45,8 +45,8 @@ Field bid1 represents the book sid1 is giving away and vice versa with bid2/sid2
 """
 class Exchange(models.Model):
     eid  = models.IntegerField(unique=True, primary_key=True)
-    sid1 = models.ForeignKey(Student)
+    """sid1 = models.ForeignKey(Student)
     bid1 = models.ForeignKey(Book)
     sid2 = models.ForeignKey(Student)
     bid2 = models.ForeignKey(Book)
-    date = models.DateField(auto_now_add=True)
+    date = models.DateField(auto_now_add=True)"""
