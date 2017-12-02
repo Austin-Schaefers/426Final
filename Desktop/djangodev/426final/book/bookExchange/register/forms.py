@@ -1,7 +1,12 @@
 from django import forms
+from django.contrib.auth.models import User
 from register.models import Student
 
-class rForm(forms.ModelForm):
-    class Meta:
+class UserForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput())
+
+
+    class Meta():
         model = Student
-        fields = "__all__"
+        fields = ('Username','firstname','surname', 'email', 'password','school')
+
