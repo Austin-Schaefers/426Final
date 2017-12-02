@@ -5,7 +5,7 @@ from django.db import models
 Standard db representation of a student
 """
 class Student(models.Model):
-    sid    = models.IntegerField(max_length=12, unique=True, primary_key=True)
+    sid    = models.IntegerField(unique=True, primary_key=True)
     fname  = models.CharField(max_length=20, unique=False)
     lname  = models.CharField(max_length=20, unique=False)
     pword  = models.CharField(max_length=40, unique=False)
@@ -17,8 +17,8 @@ class Student(models.Model):
 Standard db representation of a book
 """
 class Book(models.Model):
-    bid   = models.IntegerField(max_length=12, unique=True, primary_key=True)
-    isbn  = models.IntegerField(max_length=13)
+    bid   = models.IntegerField(unique=True, primary_key=True)
+    ISBN  = models.IntegerField()
     title = models.CharField(max_length=40)
 
 """ Listing Table
@@ -31,7 +31,7 @@ class Listing(models.Model):
         ('W', 'Want'),
         ('G', 'Give'),
     )
-    lid  = models.IntegerField(max_length=12, unique=True, primary_key=True)
+    lid  = models.IntegerField(unique=True, primary_key=True)
     sid  = models.ForeignKey(Student)
     bid  = models.ForeignKey(Book)
     type = models.CharField(max_length=1, choices=TYPES)
@@ -44,7 +44,7 @@ An exchange of books between two students.
 Field bid1 represents the book sid1 is giving away and vice versa with bid2/sid2
 """
 class Exchange(models.Model):
-    eid  = models.IntegerField(max_length=12, unique=True, primary_key=True)
+    eid  = models.IntegerField(unique=True, primary_key=True)
     sid1 = models.ForeignKey(Student)
     bid1 = models.ForeignKey(Book)
     sid2 = models.ForeignKey(Student)

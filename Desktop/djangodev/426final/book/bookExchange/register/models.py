@@ -5,7 +5,7 @@ from django.db import models
 Standard db representation of a student
 """
 class Student(models.Model):
-    sid    = models.IntegerField(max_length=12, unique=True, primary_key=True)
+    sid    = models.IntegerField(unique=True, primary_key=True)
     fname  = models.CharField(max_length=20, unique=False)
     lname  = models.CharField(max_length=20, unique=False)
     pword  = models.CharField(max_length=40, unique=False)
@@ -17,6 +17,6 @@ class Student(models.Model):
 Standard db representation of a book
 """
 class Book(models.Model):
-    bid   = models.IntegerField(max_length=12, unique=True, primary_key=True)
-    isbn  = models.IntegerField(max_length=13)
+    bid   = models.IntegerField(unique=True, primary_key=True)
+    isbn  = models.IntegerField()
     title = models.CharField(max_length=40)
