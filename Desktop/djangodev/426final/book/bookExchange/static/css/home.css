@@ -2,6 +2,13 @@ body{
     background-color:#263245;
 }
 
+h2 {
+    color: #40464f;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 20px;
+}
+
 .navbar {
           margin-bottom: 0;
           border-radius: 0;
@@ -36,6 +43,7 @@ body{
           background:#263245;
           border: 2px solid #FFF;
       }
+
       
 @media (max-width:600px){
           .carousel-caption{
@@ -55,4 +63,8 @@ body{
 img {
           height: 100%;
       }
-      
+
+#booksearch {
+    background-color: #91b2c1;
+    padding-bottom: 5px;
+}
