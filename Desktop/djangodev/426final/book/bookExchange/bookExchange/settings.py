@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'login',
     'register',
-    'bootstrap4',
     'home',
 ]
 
@@ -126,3 +125,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
+LOGIN_URL='login/login.html'

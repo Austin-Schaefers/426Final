@@ -1,6 +1,24 @@
 from django.shortcuts import render
-from . import forms
+from register.forms import UserForm
 
 def register(request):
-    form = forms.rForm()
-    return render(request, 'register/register.html',{'form':form})
+
+    registered = False
+
+    if request.method == "POST":
+        user_form = UserForm(data=request.POST)
+
+        if user_form.is_valid():
+
+            user = user_form.save()
+            user.set_password(user.password)
+            user.save()
+
+            registered = True
+        else:
+            print(user_form.errors)
+    else:
+        user_form = UserForm()
+
+    return render(request,'register/registre.html',{'user_form':user_form,
+                                                    'registered': registered})
