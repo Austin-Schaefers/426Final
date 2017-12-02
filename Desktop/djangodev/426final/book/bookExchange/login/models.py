@@ -3,6 +3,7 @@ from django.db import models
 """ Student Table
 
 Standard db representation of a student
+Keeps track of all the books the students wants and if giving
 """
 class Student(models.Model):
     fname  = models.CharField("first name", max_length=20, unique=False, default="John")

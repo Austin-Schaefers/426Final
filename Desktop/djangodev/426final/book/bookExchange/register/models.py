@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 """ Student Table
 
 Standard db representation of a student
+Keeps track of all the books the students wants and if giving
 """
 class Student(models.Model):
     #Django User automatically creates password,email,firstname,surname, username

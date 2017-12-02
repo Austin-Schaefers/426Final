@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^register/', include('register.urls')),
     url(r'^login/', include('login.urls')),
     url(r'^about/',include('about.urls')),
+    url(r'^dashboard/', include('dashboard.urls')),
 ]
