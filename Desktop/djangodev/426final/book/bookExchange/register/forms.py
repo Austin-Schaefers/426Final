@@ -13,4 +13,4 @@ class UserForm(forms.ModelForm):
 class schoolForm(forms.ModelForm):
     class Meta():
         model = studentSchool
-        fields = ('school')
+        fields = ('school',)

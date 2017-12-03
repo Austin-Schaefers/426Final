@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'register',
     'home',
     'dashboard',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,9 @@ STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 LOGIN_URL='login/login.html'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    ]
+}

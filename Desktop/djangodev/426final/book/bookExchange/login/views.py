@@ -16,7 +16,7 @@ def user_login(request):
         if user:
             if user.is_active:
                 login(request,user)
-                return HttpResponseRedirect(reverse('dashboard'))
+                return HttpResponseRedirect(reverse('dashboard/dashboard.html'))
             else:
                 return HttpResponse("ACCOUNT NOT ACTIVE")
         else:
